@@ -1,0 +1,145 @@
+@import "../variables";
+
+.header {
+
+    background-color: $barsBackground;
+    border-radius: 0px 12px 0px 0px;
+    margin-top: 3rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    margin-left: 10rem;
+
+    &__link {
+        cursor: pointer;
+        padding: 3.3rem 0rem 3.3rem 0rem;
+        font-family: $robotoFont;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 19px;
+        color: $mainFontColor;
+        margin-right: 5rem;
+        transition: all .3s linear;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover,
+        &.active {
+            color: $mainActiveColor;
+        }
+
+    }
+
+
+
+
+    // * подчёркивание
+    .header-nav__link {
+        
+        position: relative;
+        text-decoration: none;
+        /*убираем подчёркивание*/
+
+    }
+
+    .header-nav__link:after {
+        display: block;
+        position: absolute;
+        margin-top: 31px;
+        left: 0;
+        /*изменить на right:0;, чтобы изменить направление подчёркивания */
+        width: 0px;
+        /*задаём длинну линии до наведения курсора*/
+        height: 3px;
+        /*задаём ширину линии*/
+        background-color: $mainActiveColor;
+        /*задаём цвет линии*/
+        content: "";
+        transition: width 0.3s ease-out;
+        /*задаём время анимации*/
+
+    }
+
+    .header-nav__link.active:after {
+        width: 100%;
+        /*задаём длинну линии активной ссылке*/
+
+    }
+
+
+
+    .header-nav__link:hover:after,
+    .header-nav__link:focus:after {
+        width: 100%;
+        /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+    }
+
+
+}
+
+
+// Header User
+.header-user {
+    display: flex;
+    align-items: center;
+
+    &__name {
+        font-family: $robotoFont;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 19px;
+        letter-spacing: 0.05em;
+        color: rgba(248, 196, 196, 0.88);
+
+        margin-right: 37px;
+    }
+
+    &__search {
+        display: flex;
+    }
+
+    &__avatar {
+        display: inline-block;
+        border-radius: 100%;
+        border: 3px solid #E31717;
+        margin-right: 37px;
+    }
+}
+
+
+
+.header-search__icon {
+    margin-right: 24px;
+    cursor: pointer;
+    transition: all .1s linear;
+
+    &:active {
+        transform: scale(0.8);
+    }
+}
+
+.header-user__search {
+    
+    margin-right: 30px;
+    align-items: center;
+    display: flex;
+    transition: all .9s linear;
+
+    input {
+        padding: 3px 5px 3px 10px;
+        color: $mainActiveColor;
+        font-size: 1.6rem;
+        font-family: $heeboFont;
+        outline: none;
+        width: 100%;
+    }
+
+
+}

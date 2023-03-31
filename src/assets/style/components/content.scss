@@ -1,0 +1,197 @@
+@import "../variables";
+
+
+.content {
+    // background-image: url('../../images/1.jpg');
+
+    mask-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    height: calc(100vh - 13.4vh);
+    border-radius: 0px 0px 12px 0px;
+}
+
+.content-slider-info {
+    padding-top: 60px;
+    margin-left: 156px;
+}
+
+.content-slider-info__name {
+
+    font-family: $latoFont;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 26px;
+
+    color: #F8C4C4;
+}
+
+.content-slider-info__rating {
+    display: flex;
+    align-items: center;
+
+    &-title {
+        font-family: $heeboFont;
+        font-weight: 400;
+        font-size: 2.2rem;
+        line-height: 32px;
+        letter-spacing: 0.04em;
+        color: $whiteShadow;
+
+        margin-right: 60px;
+    }
+
+}
+
+.content-slider-info__description {
+    width: 100%;
+    max-width: 515px;
+    font-family: $heeboFont;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    margin-top: -45px;
+
+    margin-bottom: 10px;
+
+    color: $whiteShadow;
+}
+
+.content-slider-info__genre,
+.content-slider-info__year {
+    font-family: $heeboFont ;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+
+    color: $whiteShadow;
+}
+
+.content-slider-info__year {
+    color: rgba(255, 255, 255, 0.89);
+    margin-bottom: 100px;
+}
+
+.btn {
+    position: relative;
+    background-color: $totalOrange;
+    outline: none;
+    display: block;
+    border-radius: 140px;
+    cursor: pointer;
+    border: none;
+    font-family: $latoFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 20px;
+
+    padding: 20px 117px 20px 44px;
+    color: $whiteShadow;
+    transition: all .3s linear;
+
+    img {
+        position: absolute;
+        right: -10px;
+        top: -10px;
+    }
+
+    &:active {
+        transform: scale(.8);
+    }
+
+}
+
+.recomended-movie {
+    margin-left: 156px;
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+  
+    width: 100%;
+    max-width: 157px;
+
+    &__title {
+        font-family: $latoFont;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.7rem;
+        line-height: 20px;
+
+        color: $whiteShadow;
+        margin-bottom: 40px;
+    }
+}
+
+.recomended-movie__card-info {
+    display: flex;
+    justify-content: space-between;
+
+
+    &__name {
+        font-family: $latoFont;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+
+        color: $whiteShadow;
+    }
+
+    &__year {
+        font-family: $latoFont;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.1rem;
+        line-height: 13px;
+        letter-spacing: 0.05em;
+
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+}
+
+.recomended-movie__card-rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px;
+    // align-items: center;
+
+    &__imdb {
+        font-family: $latoFont;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 9px;
+        line-height: 11px;
+        /* identical to box height */
+        padding-top: 33px;
+        letter-spacing: 0.05em;
+
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.recomended-movie__card-rating__stars {
+    svg {
+        width: 83px;
+        height: 77px;
+
+    }
+}
+.card-wrapper {
+    display: flex;
+  
+}
+
+.recomended-movie__card {
+    padding-right: 100px;
+    cursor: pointer;
+    img {
+        filter: drop-shadow(0px 0px 17px rgba(0, 0, 0, 0.77));
+    }
+}

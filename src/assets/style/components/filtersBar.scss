@@ -1,0 +1,33 @@
+@import "../variables";
+
+.filtersBar-wrapper {
+    margin-left: 100px;
+    padding: 2.5rem;
+    background-color: $backgroundColorFilms;
+    box-shadow: -4px 0px 17px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 251px;
+}
+
+.filterBar-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+        font-family: $filmsFont;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.7rem;
+        line-height: 23px;
+        letter-spacing: 0.05em;
+
+        color: $simpleWhite;
+    }
+
+    span {
+        padding: 0;
+    }
+
+}
